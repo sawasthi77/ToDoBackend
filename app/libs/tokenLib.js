@@ -21,7 +21,7 @@ let generateToken = (data, cb) =>{
         }
         cb(null, tokenDetails)
       } catch (err) {
-       // console.log(err)
+       console.log(err)
         cb(err, null)
       }
 }

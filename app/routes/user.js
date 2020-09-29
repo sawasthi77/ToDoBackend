@@ -126,7 +126,7 @@ module.exports.setRouter = (app) => {
     */
 
 
-    app.get(`${baseUrl}/:userId/all`, auth.isAuthorized, userController.getAllDetails);
+    app.get(`${baseUrl}/:userId/all`, userController.getAllDetails);
 
     /**
      * @apiGroup users
@@ -166,7 +166,7 @@ module.exports.setRouter = (app) => {
 
 
     
-    app.post(`${baseUrl}/friendsDetails`, auth.isAuthorized, userController.addfriendsDetails);
+    app.post(`${baseUrl}/friendsDetails`, userController.addfriendsDetails);
 
       /**
      * @apiGroup friendsDetails
@@ -202,7 +202,7 @@ module.exports.setRouter = (app) => {
 	   }
     */
 
-    app.get(`${baseUrl}/:userId/details`, auth.isAuthorized, userController.getUserById);
+    app.get(`${baseUrl}/:userId/details`, userController.getUserById);
 
      /**
      * @apiGroup friendsDetails
@@ -237,7 +237,7 @@ module.exports.setRouter = (app) => {
 	   }
     */
 
-    app.get(`${baseUrl}/:userId/friendsDetails`, auth.isAuthorized, userController.getFriendDetails);
+    app.get(`${baseUrl}/:userId/friendsDetails`, userController.getFriendDetails);
 
       /**
      * @apiGroup friendsDetails
@@ -273,7 +273,7 @@ module.exports.setRouter = (app) => {
 	   }
     */
 
-    app.post(`${baseUrl}/updatefriendsDetails`, auth.isAuthorized, userController.updateFriendsDetails);
+    app.post(`${baseUrl}/updatefriendsDetails`, userController.updateFriendsDetails);
 
  /**
      * @apiGroup updatefriendsDetails
@@ -311,7 +311,7 @@ module.exports.setRouter = (app) => {
 
   
 
-    app.post(`${baseUrl}/addtodolist`, auth.isAuthorized, userController.addToDoList);
+    app.post(`${baseUrl}/addtodolist`, userController.addToDoList);
 
     /**
      * @apiGroup addtodolist
@@ -357,7 +357,7 @@ module.exports.setRouter = (app) => {
 	   }
     */
 
-    app.get(`${baseUrl}/:userId/gettodolist`, auth.isAuthorized, userController.getToDoList);
+    app.get(`${baseUrl}/:userId/gettodolist`, userController.getToDoList);
 
     /**
      * @apiGroup gettodolist
@@ -393,7 +393,7 @@ module.exports.setRouter = (app) => {
 	   }
     */
 
-    app.put(`${baseUrl}/updatetodolist`, auth.isAuthorized, userController.updateToDoList);
+    app.put(`${baseUrl}/updatetodolist`, userController.updateToDoList);
 
     /**
      * @apiGroup updatetodolist
@@ -439,7 +439,7 @@ module.exports.setRouter = (app) => {
 	   }
     */
 
-    app.delete(`${baseUrl}/:toDoItemId/deleteToDoList`, auth.isAuthorized, userController.deleteToDoList);
+    app.delete(`${baseUrl}/:toDoItemId/deleteToDoList`, userController.deleteToDoList);
 
     /**
      * @apiGroup addtodolist
